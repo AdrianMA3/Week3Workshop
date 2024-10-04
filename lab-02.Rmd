@@ -83,8 +83,8 @@ plastic_data_all %>% head(n = 10)
 ```{r Ex1, message = FALSE}
 # Write your code here to answer exercise 1
 
-data4 %>% 
-  count(region, sort = TRUE)
+data4 %>%
+  count(region, sort=TRUE)%>%head(n=1)
 
 
 ```
