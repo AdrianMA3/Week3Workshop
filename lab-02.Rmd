@@ -96,7 +96,19 @@ data4 %>%
 ```{r Ex2, message = FALSE}
 # Write your code here to answer exercise 2
 
+plastic_data_all %>%
+  mutate(
+    mismanaged_plastic = mismanaged_plastic * population
+  )
 
+plastic_data_all %>%
+  group_by(region) %>%
+  summarise(
+    mismanaged_plastic_mean = mean(mismanaged_plastic)
+  )
+
+plastic_data_all %>%
+  arrange(desc(region))
 
 ```
 
